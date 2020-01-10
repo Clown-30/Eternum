@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Core Online Tutorial - Show Product</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../../css/show1.css">
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <div class="app">
+      <div class="shape-circle"></div>
+          <div class="shape-circle2"></div>
+      <h2 class="page-heading"><span>STec</span><i class="fasfa-sign-in-alt"></i></h2>
+      <h3 class="subtitule">Soluciones en la palma de su mano</h3>
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Show Consulta</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+          <table>
+              <tr>
+                  <th>ID_c</th>
+                  <th>Asunto</th>
+                  <th>Texto</th>
+              </tr>
+
+              <tr>
+                  <td th:text="${consulta.id_consulta}">ID_c</td>
+                  <td th:text="${consulta.asunto}">Asunto</td>
+                  <td th:text="${consulta.texto}">Texto</td>
+              </tr>
+          </table>
+
+                <div class="col-sm-3">
+
+
+                    <td><a th:href="${'/showConsultas/' + consulta.id_cliente}">Volver a Consultas</a> </td>
+
+
+                </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

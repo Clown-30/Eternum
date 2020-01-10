@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>STec</title>
+        <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+
+
+        <div class="container">
+        	<div class="app">
+        		<div class="shape-circle"></div>
+                <div class="shape-circle2"></div>
+	        	<h2 class="page-heading"><span>STec</span><i class="fasfa-sign-in-alt"></i></h2>
+	        	<h3 class="subtitule">Soluciones en la palma de su mano</h3>
+
+
+	        	<div class="login-container">
+
+	        		<h4> Ingrese a su cuenta </h4>
+
+	        		<form class="form-horizontal" th:object="${clientef}" th:action="@{/check}" method="get">
+
+
+			            <div class="form-control" th:class="	${#fields.hasErrors('Nombre')} ? 'form-control has-error' : 'form-control'">
+
+	        				<input type="text" class="username" th:field="*{Nombre}" placeholder="Nombre de Usuario" required="",th:errorclass="has-error">
+	        			</div>
+
+			            <div class="form-control" th:class="${#fields.hasErrors('password')} ? 'form-control has-error' : 'form-control'">
+	        				<input type="text" class="password" placeholder="Contraseña" th:field="*{password}" required="" ired="">
+	        			</div>
+
+                        <button type="submit" class="button-submit"name="submit">Submit</button>
+	        		</form>
+
+	        		<div class="buttom-register">
+	        			<a href="crearCliente"> ¿Usuario Nuevo? Registrese Aqui</a>
+	        		</div>
+	        	</div>
+        	</div>
+        </div>
+    </body>
+</html>

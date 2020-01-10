@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>STec</title>
+        <link rel="stylesheet" href="css/registroConsulta.css">
+        <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+		<link href="../../static/css/spring-core.css"
+        	th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+    </head>
+    <body>
+    	<script type="text/javascript" src="cordova.js"></script>
+        <div class="container">
+        	<div class="app">
+        		<div class="shape-circle"></div>
+                <div class="shape-circle2"></div>
+	        	<h2 class="page-heading"><span>STec</span><i class="fasfa-sign-in-alt"></i></h2>
+	        	<h3 class="subtitule">Soluciones en la palma de su mano</h3>
+
+	      		<form class="form-horizontal" th:object="${consultaf}" th:action="@{/crearConsulta}" method="post">
+
+		            <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+         		   		<p th:text="#{form.hasErrors}">Error Message</p>
+      			    </div>
+
+                <input type="hidden" th:field="*{id_consulta}"/>
+
+
+	    				  <input type="hidden" class="userName" th:field="*{id_cliente}"placeholder="Id_consulta" required="" th:errorclass="has-error"/>
+		            <div class="form-control" th:class="${#fields.hasErrors('asunto')} ? 'form-control has-error' : 'form-control'">
+	      				<h4> Ingrese su Asunto </h4>
+	    				<input type="text" class="userName" th:field="*{asunto}"placeholder="Asunto||||||||" required="" th:errorclass="has-error"/>
+
+	       			</div>
+
+		            <div class="form-control" th:class="${#fields.hasErrors('texto')} ? 'form-control has-error' : 'form-control'">
+	       				<h4> Escriba su problema </h4>
+	    				<input type="text" class="userContraseña" th:field="*{texto}" placeholder="Escriba aqui su problema" required="" th:errorclass="has-error"/>
+
+	       			</div>
+
+	       			<input type="submit" class="button-submit" name="Registrar">
+	       		</form>
+
+        	</div>
+        </div>
+    </body>
+</html>

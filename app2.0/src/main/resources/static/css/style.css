@@ -1,0 +1,354 @@
+@import url(https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet)
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    position: relative;
+}
+
+body{
+    background: #fcfcfc;
+    height: 100%;
+    width: 100%;
+    -webkit-text-size-adjust:100%;
+    position: relative;
+    font-family: 'Opne Sans', sans-serif;
+    font-size: 1em;
+}
+
+.container{
+    margin: 0px auto;
+    padding: 0;
+}
+.subtitule{
+
+    font-family: 'Open Sans', sans-serif;
+    float: right;
+    padding: 10px;
+}
+.app{
+    background: #fff;
+    min-height: 640px;
+    box-shadow: inset 20px 0px 0px rgba(70,145,200,1);
+    background: transparent;
+}
+.page-heading{
+    font-size: 2em;
+    margin: 60px 0 5px 30px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: -2px;
+    text-shadow: #f0f0f0 2px 2px 0;
+    border-bottom: 1px solid #555;
+    line-height: 40px;
+}
+
+.page-heading span{
+    border-bottom: 3px solid #4691C8;
+    display: inline-block;
+    margin: 0 0 -2px 0;
+    padding: 5px 3px;
+}
+
+.page-heading i{
+    float: right;
+    padding: 10px;
+}
+
+.login-container{
+    background: transparent;
+    position: absolute;
+    top:30%;
+    width:100%;
+}
+
+.login-container h4{
+    font-size: 2em;
+    margin: 10px 0 85px 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    font-size: 1,6em;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-shadow: #f0f0f0 5px 5px 0;
+}
+
+.buttom-register{
+    position: center;
+    padding: 100px;
+}
+
+.login-container .form-control{
+    position: relative;
+    padding: 0px 20px;
+}
+
+.login-container .form-control input{
+    width: 60%;
+    padding: 15px 0 10px 25px;
+    letter-spacing: 1px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #555;
+    border: 1px solid rgba(70,145,200,1);
+    border-left: 0px;
+    outline: none;
+    background: border: 1px solid rgba(70,145,200,1);
+    background: rgba(70,167,255,0.3);
+
+}
+
+.login-container .form-control input.username{
+    border-top-right-radius: 50px;
+    border-bottom: 1px solid rgba(70,145,200,1);
+}
+
+
+.login-container .form-control input.password{
+    border-bottom-right-radius: 50px;
+    border-top: 0px;
+}
+
+.login-container .form-control input:focus{
+    background: rgba(70,145,200,0.3);
+}
+
+.button-submit{
+    position: absolute;
+    top: 152px;
+    right: 10px;
+    border: 1px solid rgba(70,145,200,1);
+    background: rgba(70,145,200,0.7);
+    width: 100px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 20%;
+    box-shadow: 4px 4px #4691C8;
+    color: #555;
+}
+
+.button-submit:hover{
+    box-shadow: 4px 4px #0000A0;
+    color: #fff;
+}
+
+.shape-circle{
+    position: absolute;
+    top: 47%;
+    right: 0;
+    background: rgba(70,166,255,0.5);
+    width: 150px;
+    height: 130px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.shape-circle2{
+    position: absolute;
+    top: 12%;
+    right: 0;
+    background: rgba(70,166,255,0.25);
+    width: 360px;
+    height: 40px;
+    border-top-left-radius: 100%;
+}
+/* ACA MENU 2 */
+
+.menubar{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    border-bottom: 5px solid rgba(70,155,255,0.9);
+}
+.menubar li{
+    float:left;
+    width: 33.33%;
+}
+
+.menubar li:nth-child(1){
+    text-align: left;
+}
+.menubar li:nth-child(2){
+    text-align: center;
+
+}
+.menubar li:nth-child(3){
+    text-align: right;
+}
+
+.menubar li a{
+    display:block;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #555;
+}
+
+.menubar li a.active{
+    color: #111;
+}
+
+.menubar li a i{
+    padding: 10px;
+}
+
+.sidenav{
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #236D83;
+    overflow-x: hidden;
+    transition: : 0.5s;
+    padding-top: 60px;
+    z-index:1000;
+
+}
+
+.sidenavshape{
+    width: 400px;
+    height: 600px;
+    background: rgba(70,145,200,1);
+
+    border-radius: 10%;
+    transform: rotate(40deg);
+    position: absolute;
+    top: -80px;
+    left: -230px;
+    z-index:-1;
+}
+
+.profile{
+    padding: 0 25px;
+
+}
+
+.profile img{
+    width: 170px;
+    float: center;
+    margin: 0 25px;
+}
+
+.profile h3{
+    position: absolute;
+    top: -37px;
+    left: 20px;
+    color: #333;
+    width: 120px;
+    font-size: 3em;
+    border: 5;
+}
+
+.profile p{
+    position: absolute;
+    top: 230px;
+    left:20px;
+    color: #000;
+    border-bottom: 2px solid #222;
+}
+
+.sidenav a{
+    padding: 20px 10px 18px 22px;
+    text-decoration: none;
+    font-size:1.4em;
+    color: #334;
+    display: block;
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 2em;
+    color: rgba(200,200,200,1);
+}
+
+.sidenav ul{
+    list-style-type: none;
+    padding-top: 0;
+    width: 200px;
+    margin: 50px 0;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidenav ul li:last-child{
+    margin-top: auto;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    vertical-align : bottom;
+    font-size: 0.9em;
+    width: 120px;
+
+}
+
+.sidenav ul li a:not(.closebtn){
+    display: block;
+    color: #333;
+    padding: 8px 16px;
+    font-weight: 400;
+    font-family: 'Open Sans',sans-serif;
+    width: 150px;
+}
+
+.sidenav ul li a:hover:not(.closebtn){
+    background: #fff;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    color; #fff;
+}
+
+.clearfix{
+    clear:both;
+}
+
+
+
+/* 3 */
+.contenedor ul{
+  list-style:none;
+}
+
+.contenedor ul li a{
+  text-decoration:none;
+  color:#424242;
+}
+.contenedor ul li a:hover{
+  font-weight:bold;
+}
+
+.menuI > li{
+  display:inline-block;
+}
+
+.menuI > li > a{
+  display:block;
+  padding:5px;
+  width:90px;
+}
+
+li ul{
+  position:absolute;
+  display:none;
+}
+
+.menuD a{
+  display:block;
+  padding:2px;
+
+}
+
+li:hover ul{
+  display:block;
+
+}

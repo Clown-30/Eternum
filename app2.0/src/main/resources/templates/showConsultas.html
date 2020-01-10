@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Consultas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/showConsultas.css">
+    </head>
+
+    <body>
+      <div class="shape-circle"></div>
+          <div class="shape-circle2"></div>
+      <h2 class="page-heading"><span>STec</span><i class="fasfa-sign-in-alt"></i></h2>
+      <h3 class="subtitule">Soluciones en la palma de su mano</h3>
+        <h2>Lista de consultas</h2>
+
+        <table>
+            <tr>
+                <th>ID_c</th>
+                <th>Asunto</th>
+            </tr>
+
+            <tr th:each="consulta : ${consultas}">
+                <td th:text="${consulta.id_consulta}">ID_c</td>
+                <td th:text="${consulta.asunto}">Asunto</td>
+                <td><a th:href="${'show1Consulta/' + consulta.id_consulta}">Ver detalles</a> </td>
+                <td><a th:href="${'delConsulta/' + consulta.id_consulta}">Eliminar</a> </td>
+            </tr>
+        </table>
+        <div class="row">
+            <div class="col-sm-3">
+
+            <tr th:each="id : ${id_clienteh}">
+                <td><a th:href="${'/crearConsulta/' + id}">Crear Consulta</a> </td>
+            </tr>
+
+            </div>
+        </div>
+    </body>
+</html>

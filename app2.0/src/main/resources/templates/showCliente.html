@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Clientes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h2>Lista de clientes</h2>
+
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Password</th>
+            </tr>
+
+            <tr th:each="cliente : ${clientes}">
+                <td th:text="${cliente.id_cliente}">Id</td>
+                <td th:text="${cliente.nombre}">Nombre</td>
+                <td th:text="${cliente.password}">Password</td>
+                <td><a th:href="${'show1Cliente/' + cliente.id_cliente}">View</a> </td>
+                <td><a th:href="${'delCliente/' + cliente.id_cliente}">Delete</a> </td>
+            </tr>
+        </table>
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="/crearCliente">Añadir Cliente</a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+body{
+  font-family: Arial;
+}
+
+
+.page-heading{
+    font-size: 2em;
+    margin: 60px 0 5px 30px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: -2px;
+    text-shadow: #f0f0f0 2px 2px 0;
+    border-bottom: 1px solid #555;
+    line-height: 40px;
+}
+
+.page-heading span{
+    border-bottom: 3px solid #4691C8;
+    display: inline-block;
+    margin: 0 0 -2px 0;
+    padding: 5px 3px;
+}
+
+.page-heading i{
+    float: right;
+    padding: 10px;
+}
+
+.subtitule{
+	float: right;
+    padding: 10px;
+}
+
+table{
+  background: rgba(70,145,200,0.7);
+  text-align: left;
+  width: 100%;
+}
